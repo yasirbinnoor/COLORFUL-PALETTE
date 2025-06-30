@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    transition: background 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #f1f2f6;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.navbar h1 {
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+}
+
+.navbar button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Sound section */
+.sound {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sound i {
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sound:hover i {
+    transform: rotate(20deg);
+    color: #ff4757;
+}
+
+/* Palette Grid */
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2.5rem;
+}
+
+/* Color Box */
+.color-box {
+    width: 200px;
+    height: 150px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #ddd;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.color-box h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    padding: 6px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Optional Copy Button */
+.copy-button {
+    background: #222;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.copy-button:hover {
+    background: #444;
+    transform: scale(1.04);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .color-box {
+        width: 120px;
+        height: 100px;
+        padding: 8px;
+    }
+
+    .color-box h2 {
+        font-size: 10px;
+    }
+
+    .copy-button {
+        width: 100%;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .sound p {
+        display: none;
+    }
+
+    .back-arrow {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
